@@ -19,7 +19,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation */
+/* Navigation button ka section */
 .navbar {
     padding: 1.5rem 5%;
     position: fixed;
@@ -56,7 +56,7 @@ body {
     
 }
 
-/* Hero Section */
+/* ye hero section */
 .hero {
     min-height: 100vh;
     padding: 15rem 5%;
@@ -104,7 +104,7 @@ body {
     box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
 }
 
-/* Projects Section */
+/* Ye mera projects section hai */
 .projects {
     padding: 5rem 5%;
     
@@ -147,7 +147,7 @@ body {
     font-size: 0.8rem;
 }
 
-/* Skills Section */
+/* ye skills section */
 .skills {
     padding: 5rem 5%;
 }
@@ -187,7 +187,7 @@ body {
     animation: iconBounce 0.5s ease;
 }
 
-/* Mobile Responsive */
+/* Mobile device code */
 @media (max-width: 768px) {
     .navbar {
         padding: 0.8rem 5%;
@@ -302,25 +302,37 @@ footer {
     50% { border-color: var(--primary-color) }
 }
 
-/* Responsive Grid Systems */
+/* Responsive Grids */
 .skills-grid,
 .project-grid,
 .cert-grid {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 2rem 5%;
     max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 5%;
+    margin: 0 auto;
 }
 
-.skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+.skills-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+.project-grid { grid-template-columns: 1fr; }
+.cert-grid { grid-template-columns: 1fr; }
+
+/* Mobile Optimization */
+@media (min-width: 768px) {
+    .nav-links { justify-content: flex-end; gap: 2rem; }
+    .hero { text-align: left; padding: 10rem 5%; }
+    .project-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .cert-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .footer-links { flex-direction: row; justify-content: center; }
 }
 
-.project-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+@media (max-width: 480px) {
+    .nav-links { gap: 0.75rem; }
+    .nav-links a { font-size: 0.8rem; }
+    .hero { padding: 6rem 5% 2rem; }
 }
 
-.cert-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+@keyframes blink {
+    0%, 100% { border-color: transparent }
+    50% { border-color: var(--primary-color) }
 }
