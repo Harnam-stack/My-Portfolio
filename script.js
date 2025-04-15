@@ -1,4 +1,4 @@
-const professions = ["Developer", "Tester","Analyst"];
+const professions = ["Developer", "Tester", "Analyst"];
 let currentProfession = 0;
 let charIndex = 0;
 const typingSpeed = 100;
@@ -30,15 +30,12 @@ function eraseText() {
         setTimeout(typeText, typingSpeed);
     }
 }
-   
-// Initialize
+
 window.addEventListener('load', () => {
     typeText();
-    document.getElementById('typing-text').style.animation = 
-        "blink 0.75s step-end infinite";
+    document.getElementById('typing-text').style.animation = "blink 0.75s step-end infinite";
 });
 
-// Scroll Animation
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
@@ -48,13 +45,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.skill-item, .cert-card').forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(20px)';
-    observer.observe(el);
-});
-
-    document.querySelectorAll('.skill-item, .cert-card, .project-card').forEach(el => {
+document.querySelectorAll('.skill-item, .cert-card, .project-card').forEach(el => {
     el.style.opacity = 0;
     el.style.transform = 'translateY(20px)';
     observer.observe(el);
