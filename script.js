@@ -1,4 +1,4 @@
-const professions = ["Developer", "Tester", "Analyst"];
+const professions = ["Software Developer", "Tester", "Analyst"];
 let currentProfession = 0;
 let charIndex = 0;
 const typingSpeed = 100;
