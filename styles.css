@@ -58,9 +58,12 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    padding: 15rem 5%;
+    padding: 12rem 5% 4rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
 .hero h1 {
@@ -71,8 +74,8 @@ body {
 }
 
 .typing-container {
-    position: relative;
     display: inline-block;
+    min-height: 3.5rem;
 }
 
 .typing-text {
